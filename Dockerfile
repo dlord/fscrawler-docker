@@ -11,4 +11,6 @@ RUN curl -SL https://oss.sonatype.org/content/repositories/snapshots/fr/pilato/e
     && ln -s /opt/fscrawler-es7-2.7-SNAPSHOT/bin/fscrawler /usr/local/bin/ \
     && rm -rf /tmp/*
 
+COPY config/ /opt/fscrawler-es7-2.7-SNAPSHOT/config
+
 CMD ["/opt/fscrawler-es7-2.7-SNAPSHOT/bin/fscrawler"]
